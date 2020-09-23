@@ -1,8 +1,3 @@
-table,
-tbody {
-    border: 2px solid black;
-}
-
 body {
     background-color: plum;
     color: black;
@@ -21,3 +16,33 @@ body {
     font-size: 1.5em;
     cursor: pointer;
 }
+
+.header,
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px black solid;
+    border-bottom: 1px black solid;
+    cursor: pointer;
+}
+
+.table,
+td {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 2px black solid;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px black solid;
+    cursor: pointer;
+}
+
+
+/* td {
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
