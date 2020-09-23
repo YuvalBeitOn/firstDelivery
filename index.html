@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body onload="initGame()" onkeyup="">
+    <h1>Mine Sweeper</h1>
+    <table>
+        <thead>
+            <th>Difficulty</th>
+            <th class="diff"><button onclick="setDifficulty(this)" name="Begginer"></button><br>Begginer</th>
+            <th class="diff"><button onclick="setDifficulty(this)" name="Medium"></button><br>Medium</th>
+            <th class="diff"><button onclick="setDifficulty(this)" name="Expert"></button><br>Expert</th>
+        </thead>
+        <tbody class="board"></tbody>
+    </table>
+
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+</body>
+
+</html>
