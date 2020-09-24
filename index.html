@@ -8,15 +8,33 @@
 
 <body onload="initGame()" onkeyup="">
     <h1>Mine Sweeper</h1>
-    <table class="header">
-        <thead>
-            <th>Difficulty</th>
-            <th class="diff"><button onclick="setDifficulty(this)" name="Begginer"></button><br>Begginer</th>
-            <th class="diff"><button onclick="setDifficulty(this)" name="Medium"></button><br>Medium</th>
-            <th class="diff"><button onclick="setDifficulty(this)" name="Expert"></button><br>Expert</th>
-        </thead>
-        <tbody class="board"></tbody>
-    </table>
+    <div class="game-info">
+        <div class="game-elements">
+            <h2 class="lives"></h2>
+        </div>
+        <button class="play-btn" onclick="initGame()">😀</button>
+
+    </div>
+    <div class="container">
+        <table>
+            <tbody class="board" id="small"></tbody>
+            <caption class="timer">0.00</caption>
+        </table>
+        <div class="header">
+            <div><button class="diff" onclick="setDifficulty(this)" name="Begginer">Begginer</button></div>
+            <div><button class="diff" onclick="setDifficulty(this)" name="Medium">Medium</button></div>
+            <div><button class="diff" onclick="setDifficulty(this)" name="Expert">Expert</button></div>
+        </div>
+    </div>
+    <div class="game-over-modal">
+        <h3>GAME OVER!</h3>
+        <button onclick="initGame()">RESTART GAME</button>
+    </div>
+
+    <div class="game-win-modal">
+        <h3>VICTORY!</h3>
+        <button class="restart" onclick="initGame()">RESTART GAME</button>
+    </div>
 
     <script src="js/utils.js"></script>
     <script src="js/game.js"></script>
