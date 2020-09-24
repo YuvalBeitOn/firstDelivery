@@ -2,6 +2,8 @@
 
 // pos - object {i: i, j: j}
 
+document.body.style.zoom = "90%";
+
 const MINE = '💣';
 const HIDE = ' ';
 const FLAG = '🚩';
