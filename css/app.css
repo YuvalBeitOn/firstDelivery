@@ -2,15 +2,18 @@
         background-color: rgb(235, 223, 223);
         color: black;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
     }
     
     .game-info {
-        display: flex;
         width: 100%;
+        text-align: center;
+        margin: auto;
+        width: 50%;
     }
     
     .play-btn {
-        font-size: 36px;
+        font-size: 50px;
         background-color: transparent;
         width: 100px;
         height: 75px;
@@ -34,9 +37,10 @@
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         background-color: rgb(243, 199, 206);
         font-weight: bold;
-        font-size: 20px;
+        font-size: 25px;
         border: 1px solid white;
         color: rgb(56, 56, 56);
+        font-style: italic;
     }
     
     h1 {
@@ -48,6 +52,7 @@
         background-color: rgb(243, 199, 206);
         width: 100%;
         height: 50%;
+        font-style: italic;
     }
     
     table {
@@ -110,7 +115,7 @@
         text-align: center;
         position: absolute;
         left: 50%;
-        top: 60%;
+        top: 50%;
         padding: 10px;
         transform: translate(-50%, -50%);
         background-color: rgba(131, 127, 127, 0.3);
@@ -124,7 +129,7 @@
         text-align: center;
         position: absolute;
         left: 50%;
-        top: 60%;
+        top: 50%;
         padding: 10px;
         transform: translate(-50%, -50%);
         background-color: rgba(131, 127, 127, 0.3);
@@ -138,17 +143,70 @@
         color: rgb(56, 56, 56);
     }
     
-    .lives {
-        font-size: 30px;
-        color: rgb(56, 56, 56);
-    }
-    
-    .restart {
+    .restart,
+    .safe-click-btn {
         cursor: pointer;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: white;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 25px;
         border: 1px solid white;
         color: rgb(56, 56, 56);
+        font-style: italic;
+    }
+    
+    .game-elements {
+        font-size: 20px;
+        color: rgb(56, 56, 56);
+        text-align: center;
+        position: absolute;
+        top: 20%;
+        right: 15%;
+        padding: 10px;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgba(131, 127, 127, 0.3);
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 150px;
+        border-radius: 25px;
+    }
+    
+    .safe-click {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        color: rgb(56, 56, 56);
+        padding: 10;
+        text-align: center;
+        position: absolute;
+        left: 25%;
+        top: 20%;
+        padding: 10px;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgba(131, 127, 127, 0.3);
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 130px;
+        border-radius: 25px;
+        font-style: italic;
+    }
+    
+    .best-score {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        color: rgb(56, 56, 56);
+        padding: 10;
+        /* border: 1px solid rgba(131, 127, 127, 0.3);
+        background-color: rgba(255, 255, 255, 0.3); */
+        border-radius: 25px;
+        font-style: italic;
+    }
+    
+    .restart,
+    .safe-click-btn {
+        cursor: pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: white;
+        font-weight: bold;
+        font-size: 25px;
+        border: 1px solid white;
+        color: rgb(56, 56, 56);
+        font-style: italic;
     }

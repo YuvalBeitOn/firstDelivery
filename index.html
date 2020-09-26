@@ -8,13 +8,23 @@
 
 <body onload="initGame()" onkeyup="">
     <h1>Mine Sweeper</h1>
-    <div class="game-info">
-        <div class="game-elements">
-            <h2 class="lives"></h2>
-        </div>
-        <button class="play-btn" onclick="initGame()">😀</button>
-
+    <div class="game-elements">
+        <h2 class="lives"></h2>
+        <h2 class="hints" onclick="hintClicked()"></h2>
     </div>
+
+    <div class="safe-click">
+        <h2>Safe-Click</h2>
+        <button class="safe-click-btn" onclick="safeClick()">3 Left</button>
+    </div>
+
+    <div class="best-score">
+        <h2>Best Score</h2>
+        <h3 class="score">Begginer: 0</h3>
+    </div>
+
+    <button class="play-btn" onclick="initGame()">😀</button>
+
     <div class="container">
         <table>
             <tbody class="board" id="small"></tbody>
@@ -26,13 +36,14 @@
             <div><button class="diff" onclick="setDifficulty(this)" name="Expert">Expert</button></div>
         </div>
     </div>
+
     <div class="game-over-modal">
         <h3>GAME OVER!</h3>
-        <button onclick="initGame()">RESTART GAME</button>
+        <button class="restart" onclick="initGame()">RESTART GAME</button>
     </div>
 
     <div class="game-win-modal">
-        <h3>VICTORY!</h3>
+        <h3>WINNER!</h3>
         <button class="restart" onclick="initGame()">RESTART GAME</button>
     </div>
 
