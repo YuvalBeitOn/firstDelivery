@@ -1,7 +1,5 @@
 'use strict'
 
-window.localStorage;
-
 const HIDE = ' ';
 const MINE = '💣';
 const FLAG = '🚩';
@@ -30,7 +28,9 @@ var gBoard;
 
 function initGame() {
     resetGameElemnt();
-    document.querySelector('.score').innerHTML = 'Begginer: ' + localStorage.getItem('score');
+    document.querySelector('.begginer-score').innerHTML = 'Begginer: ' + localStorage.getItem('begginer-score');
+    document.querySelector('.medium-score').innerHTML = 'Medium: ' + localStorage.getItem('medium-score');
+    document.querySelector('.expert-score').innerHTML = 'Expert: ' + localStorage.getItem('expert-score');
     gBoard = buildBoard();
     gIsFirstClick = true;
     renderBoard(gBoard);
@@ -269,20 +269,30 @@ function gameWin() {
     updateBestScore();
 }
 
-
 function updateBestScore() {
     var elTimer = document.querySelector(".timer");
     var currScore = +elTimer.innerText;
-    var score = +localStorage.getItem('score');
-    if (score === 0) {
-        localStorage.setItem('score', currScore);
-        return;
+    if (gLevel.SIZE === 4) {
+        var begginerScore = +localStorage.getItem('begginer-score');
+        console.log(begginerScore);
+        if (begginerScore === 0 || begginercurrScore < begginerScore) {
+            localStorage.setItem('begginer-score', currScore);
+        }
     }
-    if (currScore < score) {
-        localStorage.clear();
-        localStorage.setItem('score', currScore);
-        return;
-    } else console.log('Nothing change');
+    if (gLevel.SIZE === 8) {
+        var mediumScore = +localStorage.getItem('medium-score');
+        console.log(mediumScore);
+        if (mediumScore === 0 || currScore < mediumScore) {
+            localStorage.setItem('medium-score', currScore);
+        }
+    }
+    if (gLevel.SIZE === 12) {
+        var expertScore = +localStorage.getItem('expert-score');
+        console.log(expertScore);
+        if (expertScore === 0 || currScore < expertScore) {
+            localStorage.setItem('expert-score', currScore);
+        }
+    }
 }
 
 function gameOver() {
