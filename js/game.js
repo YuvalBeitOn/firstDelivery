@@ -275,7 +275,7 @@ function updateBestScore() {
     if (gLevel.SIZE === 4) {
         var begginerScore = +localStorage.getItem('begginer-score');
         console.log(begginerScore);
-        if (begginerScore === 0 || begginercurrScore < begginerScore) {
+        if (begginerScore === 0 || currScore < begginerScore) {
             localStorage.setItem('begginer-score', currScore);
         }
     }
