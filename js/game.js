@@ -465,6 +465,7 @@ function undoLastMove() {
         renderBoard(gBoard);
         return;
     } else if (currCell.isMarked) {
+        console.log('im here');
         currCell.isMarked = false;
         currCell.isShown = false;
         if (currCell.isMine) gCountFlags--;
