@@ -198,7 +198,7 @@ function cellClicked(i, j) {
     gLastMove.push(pos);
 
     if (gIsFirstClick) {
-        timer();
+        startTime();
         gFirstPos = pos;
         placeMines(gBoard);
         updateCountMines(gBoard);
@@ -274,7 +274,7 @@ function expandShown(pos) {
                 gNegsToExpose.push(currPos);
                 gLastMove.push(currPos);
                 renderBoard(gBoard);
-                // expandShown(currPos); // recursion?
+                if (currCell.minesAroundCount === 0) expandShown(currPos); // recursion?
             }
         }
     }
@@ -337,7 +337,7 @@ function gameOver() {
     clearInterval(gTimeInterval);
 }
 
-function timer() {
+function startTime() {
     var elTimer = document.querySelector('.timer');
     var milisec = 0;
     var sec = 0;
@@ -346,7 +346,7 @@ function timer() {
             sec += 1;
             milisec = 0;
         }
-        elTimer.innerText = sec + '.' + milisec;
+        elTimer.innerText = 'Time: ' + sec + '.' + milisec;
         milisec++;
     }, 10)
 }
@@ -354,7 +354,7 @@ function timer() {
 function resetTimer() {
     var elTimer = document.querySelector('.timer');
     clearInterval(gTimeInterval)
-    elTimer.innerText = '0.00';
+    elTimer.innerText = 'Time: 0.00';
 }
 
 function renderHints() {
